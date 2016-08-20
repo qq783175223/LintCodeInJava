@@ -22,12 +22,7 @@ public class Solution {
     }
     
     public void postorderTraversal2(TreeNode root,ArrayList<Integer> list){
-        if(root==null){
-            return;
-        }
-        if(root.left==null&&root.right==null){
-            list.add(root.val);
-        }else{
+        if(root!=null){
             postorderTraversal2(root.left,list);
             postorderTraversal2(root.right,list);
             list.add(root.val);
