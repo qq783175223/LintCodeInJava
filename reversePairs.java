@@ -33,7 +33,7 @@ public class Solution {
         for(i=0,j=0,k=beginIndexL;i<lengthL&&j<lengthR;k++){
             if(L[i]>R[j]){
                 array[k]=R[j++];
-                result +=lengthL-i;
+                result +=lengthL-i;//当前位置L[i]的值大于R[j],那么L[i]后面的数肯定也大于R[j],所以result +=lengthL-i
             }else{
                 array[k]=L[i++];
             }
