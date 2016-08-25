@@ -15,6 +15,7 @@ public class Solution {
      * @param A and B: two nodes in a Binary.
      * @return: Return the least common ancestor(LCA) of the two nodes.
      */
+    //二叉树的递归问题,多画一些二叉树例子就清晰很多
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
         // write your code here
         if(root==null||root==A||root==B){
