@@ -4,7 +4,7 @@ public class Solution {
      * @param target : target = numbers[index1] + numbers[index2]
      * @return : [index1 + 1, index2 + 1] (index1 < index2)
      */
-    //搞这么复杂是为了将最暴力的两层循环时间复杂度O(N^2)降到O(NlonN)
+    //搞这么复杂是为了将最暴力的两层循环时间复杂度O(N^2)降到O(NlogN)
     public static int[] twoSum(int[] numbers, int target) {
         // write your code here
         int len=numbers.length;
