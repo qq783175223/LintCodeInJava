@@ -22,7 +22,6 @@ public class Solution {
                 string[--index] = string[i];
             }
         }
-        
         return reallen;
     }
 }
