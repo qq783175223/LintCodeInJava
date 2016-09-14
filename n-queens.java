@@ -7,7 +7,7 @@ class Solution {
      */
     ArrayList<ArrayList<String>> solveNQueens(int n) {
         // write your code here
-    	Integer[] columnIndex=new Integer[n];
+        Integer[] columnIndex=new Integer[n];
         for(int i=0;i<columnIndex.length;i++){
             columnIndex[i]=i;
         }
@@ -23,10 +23,10 @@ class Solution {
     //将满足条件的排列转换成要求输出的格式
     private ArrayList<String> changePermutationToQueen(Integer[] array){
         ArrayList<String> oneOfAns=new ArrayList<String>();
-        for(int column=0;column<array.length;column++){
+        for(int row=0;row<array.length;row++){
             String str="";
-            for(int row=0;row<array.length;row++){
-                if(array[column]==row){
+            for(int col=0;col<array.length;col++){
+                if(array[row]==col){
                     str +="Q";
                 }else{
                     str +=".";
@@ -43,7 +43,7 @@ class Solution {
             return;
         }
         for(int i=start;i<fatherArray.length;i++){
-        	Integer[] oneOfAns=swap(fatherArray,start,i);
+            Integer[] oneOfAns=swap(fatherArray,start,i);
             permutation(oneOfAns,start+1,ans);
         }
     }
@@ -60,10 +60,10 @@ class Solution {
     }
     //交换并返回一个新的数组
     private Integer[] swap(Integer[] arr,int a,int b){
-    	Integer[] result=Arrays.copyOf(arr,arr.length);
-    	Integer tmp=result[a];
-    	result[a]=result[b];
-    	result[b]=tmp;
+        Integer[] result=Arrays.copyOf(arr,arr.length);
+        Integer tmp=result[a];
+        result[a]=result[b];
+        result[b]=tmp;
         return result;
     }
 };
