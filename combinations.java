@@ -4,6 +4,7 @@ public class Solution {
      * @param k: Given the numbers of combinations
      * @return: All the combinations of k numbers out of 1..n
      */
+    //这个求组合的算法，要求不能有重复的元素
     public List<List<Integer>> combine(int n, int k) {
 		// write your code here
 		List<List<Integer>> ans=new ArrayList<List<Integer>>();
@@ -24,6 +25,7 @@ public class Solution {
 			return;
 		}
 		for(int i=start;i<strArray.length;i++){
+			//这个求组合的算法，要求不能有重复的元素
 			if(!fatherList.contains(Integer.parseInt(strArray[i]))){
 				List<Integer> oneOfAns=new ArrayList<Integer>();
 				oneOfAns.addAll(fatherList);
